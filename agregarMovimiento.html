@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand m-2 text-white" href="#">Finanzas</a>
+                <a class="nav-link nav-item text-white" href=#>Agregar Movimiento</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"></li>
+                </ul>
+                
+                <form class="d-flex" role="search">
+                    <a class="active nav-link nav-item m-2 text-white" href="index.html">Inicio</a>
+                    <a class="active nav-link nav-item m-2 text-white" href="index.html">Movimientos</a>
+                    <a class="active nav-link nav-item m-2 text-white" href="estadisticas.html">Estadisticas</a>
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="cardAgregarMovimiento">
+            <div class="agregarCat">
+                <label for="agregarCat">Ingrese una categoria a agregar</label>
+                <input type="text" id="categoriaAgregada">
+            </div>
+            <div class="selectAgregar">
+                <label for='selectAgregar'>Tipo de movimiento</label><br>
+                <select id="selectAgregar">
+                    <option value="">Seleccione el Tipo</option>
+                    <option value="ingreso">Ingreso</option>
+                    <option value="egreso">Egreso</option>
+                </select>
+            </div>
+            <div class="fecha">
+                <label for="inputfecha">Seleccione la fecha</label><br>
+                <input type="date" id="inputfecha">
+            </div>
+            <div class="monto">
+                <label for="monto">Ingrese el monto</label><br>
+                <input type="text" id="inputmonto">
+            </div>
+            <div class="categoria">
+                <label for="categoriaMovimiento">Categoria</label>
+                <select id="categoriaMovimiento">
+                    <option value="">Seleccione</option>
+                    <option value="cortarPasto">Corte de pasto</option>
+                </select>
+            </div>
+            <div class="descripcion">
+                <label for="descripcion">Descripcion</label><br>
+                <textarea id='inputdescripcion' placeholder="Ingrese una breve descripcion" maxlength="100" style="max-width: 5cm;max-height: 20cm;"></textarea>
+            </div>
+
+
+
+        </section>
+        
+       
+        <div class="" id="contenedorTablas">
+
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</html>
+    
+</body>
+</html>
