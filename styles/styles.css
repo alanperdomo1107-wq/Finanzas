@@ -1,0 +1,9 @@
+.cardAgregarMovimiento{
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.cardAgregarMovimiento input, select {
+    width: 250px;
+    
+}

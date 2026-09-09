@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+
 <body><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
@@ -41,11 +36,10 @@
     </header>
 
     <main>
+        
         <section class="cardAgregarMovimiento">
-            <div class="agregarCat">
-                <label for="agregarCat">Ingrese una categoria a agregar</label>
-                <input type="text" id="categoriaAgregada">
-            </div>
+            <h2>Agregar Movimiento</h2>
+            
             <div class="selectAgregar">
                 <label for='selectAgregar'>Tipo de movimiento</label><br>
                 <select id="tipoMovimiento">
@@ -60,22 +54,30 @@
             </div>
             <div class="monto">
                 <label for="monto">Ingrese el monto</label><br>
-                <input type="text" id="inputmonto">
+                <input type="number" id="inputmonto">
             </div>
             <div class="categoria">
                 <label for="categoriaMovimiento">Categoria</label>
                 <select id="categoriaMovimiento">
                     <option value="">Seleccione</option>
                     <option value="Corte">Corte de pasto</option>
+                    <option value="Corte">Venta</option>
+                    <option value="Corte">Impuestos</option>
+                    <option value="Corte">Ahorro</option>
                 </select>
             </div>
+            
             <div class="descripcion">
                 <label for="descripcion">Descripcion</label><br>
-                <textarea id='inputdescripcion' placeholder="Ingrese una breve descripcion" maxlength="100" style="max-width: 5cm;max-height: 20cm;"></textarea>
+                <textarea id='inputdescripcion' placeholder="Ingrese una breve descripcion" maxlength="100" style="max-width: 5cm;max-height: 5cm;"></textarea>
             </div>
 
             <button type="button" id="crearMovimiento">Crear Movimiento</button>
-
+            <div class="agregarCat">
+                <label for="agregarCat">Cree una categoria</label>
+                <input type="text" id="categoriaAgregada">
+                <button type="button" id="crearCategoria">Crear</button>
+            </div>
         </section>
         
        

@@ -3,6 +3,7 @@ import { GestorMovimientos } from "../gestores/gestorMovimientos.js";
 let gestorMovimientos = new GestorMovimientos;
 
 
+
 document.addEventListener('DOMContentLoaded', function(){
 
 let crearMovimiento = document.getElementById("crearMovimiento");
