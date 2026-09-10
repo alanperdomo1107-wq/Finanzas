@@ -14,7 +14,7 @@ export class GestorMovimientos {
                     movimientosGuardados[i]._descripcion,
                 )
                 movimiento._id =
-                    movimientosGuardados[i]._id;
+                    movimientosGuardados[i].id;
 
                 this.movimientos.push(movimiento);
 
@@ -38,7 +38,7 @@ export class GestorMovimientos {
     }
 
     agregarMovimiento(movimiento){
-        movimiento._id = this._id;
+        movimiento.id = this._id;
 
         this._id++;
 
@@ -48,9 +48,9 @@ export class GestorMovimientos {
 
     }
 
-    buscarMovimiento(nombre){
+    buscarMovimiento(id){
         for(let i = 0;i < this.movimientos.length;i++){
-            if (this.movimientos[i].nombre.toLowerCase() == nombre.toLowerCase()) {
+            if (this.movimientos[i].id.toLowerCase() == id.toLowerCase()) {
                 return i;
             }
         
@@ -59,10 +59,10 @@ export class GestorMovimientos {
 
     }
 
-    eliminarMovimiento(nombre){
+    eliminarMovimiento(id){
         for (let i = 0; i < this.movimientos.length; i++) {
 
-            if (this.movimientos[i].nombre.toLowerCase() == nombre.toLowerCase()) {
+            if (this.movimientos[i].id.toLowerCase() == id.toLowerCase()) {
                  this.movimientos.splice(i, 1);
                 this.guardar();
                 return;
