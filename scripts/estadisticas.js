@@ -3,7 +3,7 @@ let contenedorTablas = document.getElementById('contenedorTablas');
 let selectEstadistica = document.getElementById('selectEstadistica');
 let contenedorTotal = document.getElementById('total');
 
-addEventListener("change",function(){
+selectEstadistica.addEventListener("change",function(){
 
  switch(selectEstadistica.value){
     case 'ingresos':
