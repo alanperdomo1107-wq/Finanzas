@@ -16,7 +16,7 @@ addEventListener("change",function(){
             <th>Categoria</th>
             <th>Descripcion</th>
         </tr></table>`
-        crearTabla("ingreso");
+        crearTabla("Ingreso");
         break;
         case "egresos":
             contenedorTablas.innerHTML = 
@@ -28,7 +28,7 @@ addEventListener("change",function(){
             <th>Categoria</th>
             <th>Descripcion</th>
         </tr></table>`
-        crearTabla("egreso");
+        crearTabla("Egreso");
         break;
         case "balance":
             contenedorTablas.innerHTML = 
@@ -40,7 +40,7 @@ addEventListener("change",function(){
             <th>Categoria</th>
             <th>Descripcion</th>
         </tr></table>`
-        crearTabla("todo");
+        crearTabla("balance");
         break;
 
 
@@ -50,26 +50,39 @@ addEventListener("change",function(){
 
 function crearTabla(tipo){
     let totalPesos = 0;
-    
+    let totalIngreso = 0;
+    let totalEgreso = 0;
+
     for(let i = 0;i< movimientos.length ; i++){
         
         if(movimientos[i]._tipo == tipo){
-            console.log('hola');
-            console.log(movimientos[i]);
+         
             contenedorTablas.innerHTML += '<tr><td>' + movimientos[i]._fecha + '</td><td> $'+ movimientos[i]._total +' </td><td>'+movimientos[i]._categoria +' </td><td> ' +movimientos[i]._descripcion +'</td></tr><br>';
-            if(tipo == 'egreso'){
+            if(tipo == 'Egreso'){
                 totalPesos -= parseInt(movimientos[i]._total);
-                console.log(totalPesos); 
             }
-            else{
+            else if(tipo == 'Ingreso'){
               totalPesos += parseInt(movimientos[i]._total);
-            console.log(totalPesos);  
             }
+            
            
+        }
+        if(tipo == 'balance'){
+            contenedorTablas.innerHTML += '<tr><td>' + movimientos[i]._fecha + '</td><td> $'+ movimientos[i]._total +' </td><td>'+movimientos[i]._categoria +' </td><td> ' +movimientos[i]._descripcion +'</td></tr><br>';
+            if(movimientos[i]._tipo == 'Egreso'){
+                totalEgreso -= parseInt(movimientos[i]._total)
+                 
+            }
+            else if(movimientos[i]._tipo == 'Ingreso'){
+              totalIngreso += parseInt(movimientos[i]._total)
+            }
+            totalPesos = totalIngreso + totalEgreso;
+
         }
     }
     contenedorTotal.innerHTML = '<p>EL TOTAL ES: $'+totalPesos + '</p'
     
 }
+
 
 
