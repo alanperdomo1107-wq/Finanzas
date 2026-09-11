@@ -32,7 +32,7 @@ selectEstadistica.addEventListener("change",function(){
         break;
         case "balance":
             contenedorTablas.innerHTML = 
-            `<h2>Egresos Totales</h2>
+            `<h2>Balance Total</h2>
         <table id="datos-tabla">
         <tr class="p-3">
             <th>Fecha</th>
