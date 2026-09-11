@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Finanzas · Movimientos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand m-2 text-white" href="#">Finanzas</a>
-                <a class="nav-link nav-item text-white" href=#>Movimientos</a>
-
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid px-0">
+                <a class="navbar-brand m-0 brand-mark" href="index.html">
+                    Finanzas
+                    <span class="brand-tagline">Registro de ingresos y egresos</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -20,45 +24,51 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item"></li>
                 </ul>
-                
-                <form class="d-flex" role="search">
-                    <a class="active nav-link nav-item m-2 text-white" href="index.html">Inicio</a>
-                    <a class="active nav-link nav-item m-2 text-white" href="#">Movimientos</a>
-                    <a class="active nav-link nav-item m-2 text-white" href="estadisticas.html">Estadisticas</a>
 
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                <form class="d-flex" role="search">
+                    <a class="nav-link nav-item is-current" href="index.html">Inicio</a>
+                    <a class="nav-link nav-item" href="agregarMovimiento.html">Movimientos</a>
+                    <a class="nav-link nav-item" href="estadisticas.html">Estadisticas</a>
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
                 </div>
             </div>
         </nav>
-
     </header>
 
     <main>
+        <div class="ledger-toolbar">
+            <div class="page-heading">
+                <h1>Movimientos</h1>
+                <p>Historial completo de ingresos y egresos registrados.</p>
+            </div>
+            <a href="agregarMovimiento.html">
+                <button type="button" id="agregarMovimiento" class="btn-ledger is-accent">Agregar movimiento</button>
+            </a>
+        </div>
 
-        <h2>MOVIMIENTOS</h2>
-        <table id="datos-tabla">
-            <tr class="p-3">
-                <th>Tipo</th>
-                <th>Fecha</th>
-                <th>Total</th>
-                <th>Categoria</th>
-                <th>Descripcion</th>
-            </tr>
-        </table>
-
-        <a href='agregarMovimiento.html'><button type="button" id="agregarMovimiento">Agregar Movimiento</button></a>
-
-        
-        
+        <div class="table-wrap">
+            <table id="datos-tabla">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Fecha</th>
+                        <th>Total</th>
+                        <th>Categoria</th>
+                        <th>Descripcion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
     </main>
-    <footer>
-        
+    <footer></footer>
 
-    </footer>
-    
 </body>
+<script type="module" src="clases/movimientos.js"></script>
+<script type="module" src="gestores/gestorMovimientos.js"></script>
 <script type="module" src="scripts/index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>
